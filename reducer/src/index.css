@@ -1,0 +1,234 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  --clr-primary: #2680c0;
+  --clr-primary-dark: hsl(205, 100%, 21%);
+  --clr-primary-light: hsl(205, 84%, 74%);
+  --clr-grey-1: #102a42;
+  --clr-grey-5: #617d98;
+  --clr-grey-10: #f1f5f8;
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.25rem;
+  --large-screen-width: 1170px;
+  --small-screen-width: 90vw;
+  --fixed-width: 50rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/* more global css */
+
+.btn {
+  text-transform: uppercase;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 700;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+  color: var(--clr-primary);
+  background: var(--clr-primary-light);
+}
+
+section {
+  width: 90vw;
+  margin: 40px auto 0;
+  padding: 2.5rem 0;
+  max-width: var(--fixed-width);
+  min-height: calc(100vh - 120px);
+}
+
+nav {
+  background-color: var(--clr-primary);
+  padding: 1.25rem 2rem;
+}
+
+.nav-center {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--fixed-width);
+  color: var(--clr-white);
+}
+
+.nav-center svg {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--clr-white);
+}
+
+.nav-icons {
+  position: relative;
+  display: block;
+}
+
+.amount-container {
+  position: absolute;
+  top: -0.7rem;
+  right: -0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--clr-primary-light);
+}
+
+.amount-container p {
+  font-size: 1.25rem;
+  color: var(--clr-white);
+  margin-bottom: 0;
+}
+
+.single-product {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.single-product img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+
+.product-buttons button {
+  width: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  fill: var(--clr-primary);
+}
+
+.product-buttons p {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.product-info p,
+h4 {
+  margin-bottom: 0.5rem;
+}
+
+.remove-btn {
+  border: none;
+  letter-spacing: var(--spacing);
+  background-color: transparent;
+  color: var(--clr-primary);
+  cursor: pointer;
+}
+
+header h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+footer {
+  margin-top: 4rem;
+  border-top: 3px solid var(--clr-grey-5);
+  padding: 1rem 0;
+}
+
+.cart-total h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.clear-btn {
+  border: 1px solid var(--clr-red-dark);
+  background-color: var(--clr-white);
+  color: var(--clr-red-dark);
+  margin: 5rem auto 0;
+  display: block;
+}
+
+.clear-btn:hover {
+  background-color: var(--clr-red-light);
+  color: var(--clr-white);
+}
